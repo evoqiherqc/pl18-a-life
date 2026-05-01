@@ -1,0 +1,661 @@
+/* ============================================================
+   PL18 — a life
+   styles for the GitHub Pages landing site
+   ============================================================ */
+
+:root {
+  --cream: #f4ebd9;
+  --cream-2: #efe4d0;
+  --ink: #2a1f15;
+  --ink-2: #3a2f25;
+  --muted: #5d4a36;
+  --muted-2: #6b5538;
+  --muted-3: #8b6f3f;
+  --lacquer: #7a2e1e;
+  --gold: #c9962b;
+  --gold-2: #d4a655;
+  --archive: #6b7b85;
+  --rule: #c4ad7f;
+  --rule-soft: #d6c5a3;
+  --dark-bg: #1a1410;
+  --dark-bg-2: #0e0a07;
+  --dark-rule: #5d4a36;
+
+  /* Paradata colours — four tiers, source-of-truth for each claim. */
+  --paradata-verified: #5a7a3a;     /* specialist scholarship */
+  --paradata-documentary: #3a6a8a;  /* direct measurement of the object */
+  --paradata-catalogue: #c08a3a;    /* institutional record, unverified by current staff */
+  --paradata-ai: #a85533;           /* interpretive content from image/video/text models */
+
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-serif);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: inherit; }
+
+/* ============================================================
+   Top bar
+   ============================================================ */
+
+.topbar {
+  background: var(--lacquer);
+  color: var(--cream);
+}
+
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.topbar-id {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.topbar-num {
+  color: var(--gold-2);
+  margin-right: 4px;
+}
+
+.topbar-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.topbar-nav a {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--cream);
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.topbar-nav a:hover { opacity: 1; }
+
+/* ============================================================
+   Hero
+   ============================================================ */
+
+.hero {
+  border-bottom: 1px solid var(--rule);
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.hero-text { padding: 80px 50px 60px; }
+
+.hero-title {
+  font-size: clamp(40px, 5vw, 60px);
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin: 0 0 32px;
+  line-height: 1.05;
+  font-family: var(--font-serif);
+}
+
+.hero-lead {
+  font-size: 18px;
+  color: var(--ink-2);
+  line-height: 1.65;
+  margin: 0 0 18px;
+  font-family: var(--font-serif);
+}
+
+.hero-lead:last-of-type { margin-bottom: 0; }
+
+/* ============================================================
+   Editorial
+   ============================================================ */
+
+.editorial {
+  padding: 60px 50px 50px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.editorial-body {
+  font-size: 16px;
+  color: var(--ink-2);
+  line-height: 1.78;
+  font-family: var(--font-serif);
+}
+
+.editorial-body p { margin: 0 0 18px; }
+.editorial-body p:last-child { margin-bottom: 0; }
+
+/* ============================================================
+   Film section
+   ============================================================ */
+
+.film-section {
+  padding: 0 50px 80px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.film-intro {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  color: var(--ink-2);
+  line-height: 1.6;
+  max-width: 640px;
+  margin: 0 0 22px;
+}
+
+.film-frame {
+  background: var(--dark-bg);
+  aspect-ratio: 16/9;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.film-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.film-frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: var(--dark-bg);
+}
+
+.film-meta {
+  display: flex;
+  gap: 28px;
+  margin-top: 18px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted-3);
+  letter-spacing: 0.22em;
+}
+
+/* ============================================================
+   3D model viewer
+   ============================================================ */
+
+.model-section {
+  padding: 60px 50px 60px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.model-intro {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  color: var(--ink-2);
+  line-height: 1.6;
+  max-width: 640px;
+  margin: 0 0 22px;
+}
+
+.model-frame {
+  aspect-ratio: 16/9;
+  background: var(--dark-bg);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+/* ============================================================
+   Catalogue (dark layer)
+   ============================================================ */
+
+.cat {
+  padding: 80px 50px;
+  background: var(--dark-bg);
+  color: var(--cream);
+}
+
+.paradata-inline-note {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted-3);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 auto 28px;
+  max-width: 880px;
+  text-align: center;
+}
+
+.cat-head {
+  display: flex;
+  align-items: baseline;
+  gap: 22px;
+  margin: 0 auto 36px;
+  border-bottom: 1px solid var(--dark-rule);
+  padding-bottom: 22px;
+  max-width: 880px;
+}
+
+.cat-stamp {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--gold-2);
+  letter-spacing: 0.22em;
+  border: 1px solid var(--gold-2);
+  padding: 6px 12px;
+}
+
+.cat-title {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-style: italic;
+  color: var(--cream);
+  margin: 0;
+  font-weight: 500;
+}
+
+.cat dl {
+  margin: 0 auto;
+  max-width: 880px;
+}
+
+.cat-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  padding: 13px 0;
+  border-bottom: 1px dotted var(--dark-rule);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.cat-row:last-of-type { border-bottom: none; }
+
+.cat dt {
+  color: var(--muted-3);
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+
+.cat dd {
+  color: var(--cream);
+  margin: 0;
+}
+
+.cat-link {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted-3);
+  letter-spacing: 0.05em;
+  margin: 36px auto 0;
+  max-width: 880px;
+  padding-top: 22px;
+  border-top: 1px dotted var(--dark-rule);
+}
+
+.cat-link a {
+  color: var(--gold-2);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--gold-2);
+}
+
+.cat-link a:hover {
+  border-bottom-style: solid;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+
+.foot {
+  padding: 26px 50px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted-3);
+  display: flex;
+  justify-content: space-between;
+  background: var(--dark-bg-2);
+  border-top: 1px solid var(--dark-rule);
+  letter-spacing: 0.05em;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+
+@media (max-width: 900px) {
+  .hero-text { padding: 50px 30px 36px; }
+  .editorial {
+    padding: 50px 30px 40px;
+  }
+  .film-section, .model-section, .cat {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .topbar-inner {
+    padding: 18px 30px;
+    flex-direction: column;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .topbar-nav { gap: 18px; }
+  .cat-row { grid-template-columns: 110px 1fr; }
+}
+
+@media (max-width: 520px) {
+  .hero-lead { font-size: 16px; }
+  .foot {
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px 30px;
+  }
+}
+
+/* ============================================================
+   PARADATA TOGGLE
+   The site's argument made into a UI element.
+   Inspired by John Carpenter's They Live (1988).
+   ============================================================ */
+
+/* The toggle itself */
+.paradata-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  background: rgba(26, 20, 16, 0.92);
+  border: 1px solid rgba(244, 235, 217, 0.2);
+  border-radius: 999px;
+  cursor: pointer;
+  user-select: none;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: rgba(244, 235, 217, 0.85);
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.paradata-toggle:hover {
+  background: rgba(26, 20, 16, 1);
+  color: var(--cream);
+}
+
+.paradata-toggle.is-on {
+  background: var(--paradata-ai);
+  border-color: var(--paradata-ai);
+  color: #fff;
+}
+
+.paradata-toggle-switch {
+  width: 28px;
+  height: 16px;
+  background: rgba(244, 235, 217, 0.18);
+  border-radius: 999px;
+  position: relative;
+  flex: 0 0 auto;
+  transition: background 0.2s;
+}
+
+.paradata-toggle.is-on .paradata-toggle-switch {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.paradata-toggle-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 12px;
+  height: 12px;
+  background: var(--cream);
+  border-radius: 50%;
+  transition: transform 0.2s ease-out;
+}
+
+.paradata-toggle.is-on .paradata-toggle-knob {
+  transform: translateX(12px);
+}
+
+/* When toggle is on, body gets a class — everything below responds to it */
+
+/* Subtle dim on the page so markings pop */
+body.paradata-on {
+  background: #ebe1cc;
+}
+
+/* Tagged elements get the treatment */
+body.paradata-on [data-source="ai"] {
+  outline: 2px solid var(--paradata-ai);
+  outline-offset: 4px;
+  position: relative;
+}
+
+body.paradata-on [data-source="verified"] {
+  outline: 2px solid var(--paradata-verified);
+  outline-offset: 4px;
+  position: relative;
+}
+
+body.paradata-on [data-source="documentary"] {
+  outline: 2px solid var(--paradata-documentary);
+  outline-offset: 4px;
+  position: relative;
+}
+
+body.paradata-on [data-source="catalogue"] {
+  outline: 2px solid var(--paradata-catalogue);
+  outline-offset: 4px;
+  position: relative;
+}
+
+/* The label tag floats above the element */
+body.paradata-on [data-source-label]::before {
+  content: attr(data-source-label);
+  position: absolute;
+  top: -14px;
+  left: -2px;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 7px;
+  color: #fff;
+  z-index: 10;
+  white-space: nowrap;
+  max-width: calc(100% + 4px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
+
+body.paradata-on [data-source="ai"][data-source-label]::before {
+  background: var(--paradata-ai);
+}
+
+body.paradata-on [data-source="verified"][data-source-label]::before {
+  background: var(--paradata-verified);
+}
+
+body.paradata-on [data-source="documentary"][data-source-label]::before {
+  background: var(--paradata-documentary);
+}
+
+body.paradata-on [data-source="catalogue"][data-source-label]::before {
+  background: var(--paradata-catalogue);
+}
+
+/* ============================================================
+   Paradata intro modal
+   First-time explainer when toggle goes on
+   ============================================================ */
+
+/* Make the [hidden] attribute actually win over display:flex below.
+   Without this, the modal sits invisibly over the whole page at z-index
+   200 and intercepts every click and hover — including on the toggle. */
+.paradata-intro[hidden] {
+  display: none;
+}
+
+.paradata-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(26, 20, 16, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  pointer-events: none;
+}
+
+.paradata-intro.is-visible {
+  pointer-events: auto;
+}
+
+.paradata-intro.is-visible {
+  opacity: 1;
+}
+
+.paradata-intro-inner {
+  max-width: 540px;
+  background: var(--cream);
+  border: 2px solid var(--paradata-ai);
+  padding: 36px 40px;
+  font-family: var(--font-serif);
+  color: var(--ink);
+  position: relative;
+}
+
+.paradata-intro-eye {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: var(--paradata-ai);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.paradata-intro-inner h3 {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0 0 16px;
+  line-height: 1.15;
+  color: var(--ink);
+}
+
+.paradata-intro-inner > p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink-2);
+  margin: 0 0 22px;
+}
+
+.paradata-key {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 26px;
+  border-top: 1px solid var(--rule-soft);
+  border-bottom: 1px solid var(--rule-soft);
+  padding: 16px 0;
+}
+
+.paradata-key li {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-2);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 6px 0;
+  line-height: 1.5;
+}
+
+.paradata-key li strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.key-swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  flex: 0 0 auto;
+  margin-top: 3px;
+  border-radius: 2px;
+}
+
+.key-swatch.key-verified { background: var(--paradata-verified); }
+.key-swatch.key-documentary { background: var(--paradata-documentary); }
+.key-swatch.key-catalogue { background: var(--paradata-catalogue); }
+.key-swatch.key-ai { background: var(--paradata-ai); }
+
+.paradata-intro-dismiss {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background: var(--ink);
+  color: var(--cream);
+  border: none;
+  padding: 12px 22px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.15s;
+}
+
+.paradata-intro-dismiss:hover {
+  background: var(--paradata-ai);
+}
+
+/* Make sure label tags don't clip dark sections */
+body.paradata-on .cat [data-source][data-source-label]::before {
+  top: -20px;
+}
+
+/* Mobile adjustments for toggle */
+@media (max-width: 520px) {
+  .paradata-toggle {
+    top: 12px;
+    right: 12px;
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+  .paradata-toggle-label { display: none; }
+  .paradata-intro-inner {
+    padding: 28px 24px;
+  }
+  .paradata-intro-inner h3 {
+    font-size: 22px;
+  }
+}

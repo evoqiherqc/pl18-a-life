@@ -1,0 +1,35 @@
+MIT License
+
+Copyright (c) 2026 James Warwick
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+Note: This MIT licence covers code in the repository (HTML, CSS, JavaScript,
+Jupyter notebook code cells). Other materials in this project carry distinct
+licences:
+
+- AI-generated stills, video, and audio: CC BY-NC-SA 4.0
+- Conservation photographs and the 3D model of PL18: © University of Glasgow /
+  GUL Special Collections, used for educational and non-commercial purposes
+- Real audio recordings (where used): retain their original licences; per-clip
+  attribution is recorded in notebook §6.7
+
+See README.md for the full licensing summary.

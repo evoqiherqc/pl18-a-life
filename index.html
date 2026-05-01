@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PL18 — a life</title>
+<meta name="description" content="A wordless film and notebook about a Burmese palm-leaf manuscript that has been at the University of Glasgow since 1873.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="paradata-on">
+
+<!-- Paradata toggle — always visible, top right. Default state is ON. -->
+<div class="paradata-toggle is-on" id="paradataToggle" aria-label="Hide paradata colour-coding">
+  <span class="paradata-toggle-label">hide paradata</span>
+  <span class="paradata-toggle-switch">
+    <span class="paradata-toggle-knob"></span>
+  </span>
+</div>
+
+<!-- First-time explainer, shown only on first toggle-on -->
+<div class="paradata-intro" id="paradataIntro" hidden>
+  <div class="paradata-intro-inner">
+    <div class="paradata-intro-eye">paradata · how this site was made</div>
+    <h3>Paradata on. Every claim now declares its source.</h3>
+    <p>Each tagged element on this page is colour-coded by where the claim it carries comes from. Four tiers, four colours.</p>
+    <ul class="paradata-key">
+      <li><span class="key-swatch key-verified"></span><strong>Verified</strong> — confirmed by specialist scholarship (e.g. the Weston handlist, peer-reviewed sources)</li>
+      <li><span class="key-swatch key-documentary"></span><strong>Documentary</strong> — direct measurement of the object (conservation photographs, the 3D photogrammetric scan)</li>
+      <li><span class="key-swatch key-catalogue"></span><strong>Catalogue</strong> — institutional record, plausible but not independently verified by current staff</li>
+      <li><span class="key-swatch key-ai"></span><strong>AI-generated</strong> — interpretive content produced by image, video, or text models</li>
+    </ul>
+    <button class="paradata-intro-dismiss" id="paradataDismiss">Got it</button>
+  </div>
+</div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-id"><span class="topbar-num">PL18</span> &middot; a life</div>
+    <nav class="topbar-nav">
+      <a href="https://github.com/evoqiherqc/pl18-a-life/blob/main/notebook.ipynb" target="_blank" rel="noopener">notebook</a>
+      <a href="https://github.com/evoqiherqc/pl18-a-life" target="_blank" rel="noopener">repository</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1 class="hero-title">PL18 &mdash; a life</h1>
+    <p class="hero-lead">A 19th-century Burmese palm-leaf manuscript, in Glasgow since 1873. No one at the University currently reads it.</p>
+    <p class="hero-lead">This site is a portfolio: a wordless film, a 3D model of the manuscript, the catalogue record, and a paradata legend that colour-codes every claim by its source.</p>
+  </div>
+</section>
+
+<section class="editorial" id="about">
+  <div class="editorial-body">
+    <p>PL18 is a Burmese palm-leaf manuscript holding the verses of the Dhammapada — gifted by a Burmese Buddhist monk to a school in Edinburgh in the 1830s, and acquired by the University of Glasgow in 1873.</p>
+    <p>The catalogue is brief, careful, and partly speculative. The film below is wordless, told from the manuscript's point of view — alongside a careful record of where the AI helped, where it had to be corrected, and where it was simply wrong.</p>
+  </div>
+</section>
+
+<section class="film-section" id="film">
+  <p class="film-intro">The film below was made entirely with image and video AI tools (Nano Banana for stills, Veo 3.1 for animation). It follows PL18 from creation in Burma to its arrival in Glasgow and into the present-day digitisation work. The transitions between clips are AI infrastructure showing through, not editorial choices &mdash; see the methodology notebook for why.</p>
+  <div class="film-frame" data-source="ai" data-source-label="AI-generated film · Veo 3.1 / Nano Banana · with corrections noted">
+    <iframe
+      src="https://www.youtube-nocookie.com/embed/videoseries?list=PL_Os-NaZyUk8O0M3GNCHTkiNZRiauoYfA&rel=0&modestbranding=1"
+      title="PL18 — a life"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+  </div>
+  <div class="film-meta">
+    <span>~4 minutes</span>
+    <span>no dialogue</span>
+  </div>
+</section>
+
+<section class="model-section" id="model">
+  <p class="model-intro">This is a real photogrammetric scan of the actual manuscript, captured on iPhone using Scaniverse, January 2026. Drag to rotate. Pinch or scroll to zoom. Unlike the film above, every surface here is documentary, not interpretive.</p>
+  <div class="model-frame" data-source="documentary" data-source-label="documentary · photogrammetry · January 2026">
+    <model-viewer
+      src="model/pl18.glb"
+      alt="3D photogrammetric model of the Burmese palm-leaf manuscript PL18"
+      camera-controls
+      auto-rotate
+      auto-rotate-delay="2000"
+      shadow-intensity="0.6"
+      exposure="0.9"
+      style="width:100%; height:100%; background:#1a1410;">
+    </model-viewer>
+  </div>
+</section>
+
+<section class="cat" id="notebook">
+  <div class="cat-head">
+    <div class="cat-stamp">cat. record</div>
+    <h2 class="cat-title">What the catalogue says, and what it doesn't</h2>
+  </div>
+  <p class="paradata-inline-note">Each row is colour-coded by source. See the paradata legend at the top of the page.</p>
+  <dl>
+    <div class="cat-row" data-source="verified" data-source-label="verified · weston handlist"><dt>shelfmark</dt><dd>PL18 (GUL Special Collections)</dd></div>
+    <div class="cat-row" data-source="documentary" data-source-label="documentary · visible in the photographs and 3D model"><dt>format</dt><dd>palm-leaf pothi, lacquered wooden covers, silk cord binding</dd></div>
+    <div class="cat-row" data-source="catalogue" data-source-label="catalogue · unverified by current staff"><dt>contents</dt><dd>Dhammapada (per catalogue, unverified by current staff)</dd></div>
+    <div class="cat-row" data-source="verified" data-source-label="verified · weston handlist"><dt>language</dt><dd>Pali in Burmese script</dd></div>
+    <div class="cat-row" data-source="catalogue" data-source-label="catalogue · unverified by current staff"><dt>origin</dt><dd>Myanmar, c. early 19th century</dd></div>
+    <div class="cat-row" data-source="verified" data-source-label="verified · weston handlist · with catalogue context"><dt>acquired</dt><dd>1873 (gifted to a school in Edinburgh in the 1830s, via unknown intermediary)</dd></div>
+    <div class="cat-row" data-source="documentary" data-source-label="documentary · this project"><dt>digitised</dt><dd>2026, in part, by this project</dd></div>
+  </dl>
+  <p class="cat-link">For the full methodology and paradata audit, see the <a href="https://github.com/evoqiherqc/pl18-a-life/blob/main/notebook.ipynb" target="_blank" rel="noopener">project notebook</a>.</p>
+</section>
+
+<footer class="foot">
+  <div>AI for the Arts and Humanities (B), University of Glasgow, 2025&ndash;26</div>
+  <div>AI-generated content released under CC BY-NC-SA 4.0</div>
+</footer>
+
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const STORAGE_KEY = 'pl18-paradata-on';
+  const INTRO_SEEN_KEY = 'pl18-paradata-intro-seen';
+
+  const toggle = document.getElementById('paradataToggle');
+  const intro = document.getElementById('paradataIntro');
+  const dismiss = document.getElementById('paradataDismiss');
+  const body = document.body;
+
+  if (!toggle) {
+    console.error('paradata toggle: button not found');
+    return;
+  }
+
+  function setState(on) {
+    if (on) {
+      body.classList.add('paradata-on');
+      toggle.classList.add('is-on');
+      toggle.querySelector('.paradata-toggle-label').textContent = 'hide paradata';
+      try { localStorage.setItem(STORAGE_KEY, '1'); } catch (e) {}
+      const seen = (function(){ try { return localStorage.getItem(INTRO_SEEN_KEY); } catch (e) { return null; }})();
+      if (!seen && intro) {
+        intro.hidden = false;
+        requestAnimationFrame(() => intro.classList.add('is-visible'));
+      }
+    } else {
+      body.classList.remove('paradata-on');
+      toggle.classList.remove('is-on');
+      toggle.querySelector('.paradata-toggle-label').textContent = 'show paradata';
+      try { localStorage.setItem(STORAGE_KEY, '0'); } catch (e) {}
+      if (intro) {
+        intro.classList.remove('is-visible');
+        setTimeout(() => { intro.hidden = true; }, 300);
+      }
+    }
+  }
+
+  // Restore state. Default is ON; only flip OFF if the user previously asked for it.
+  try {
+    if (localStorage.getItem(STORAGE_KEY) === '0') {
+      body.classList.remove('paradata-on');
+      toggle.classList.remove('is-on');
+      toggle.querySelector('.paradata-toggle-label').textContent = 'show paradata';
+    }
+  } catch (e) {}
+
+  toggle.addEventListener('click', function() {
+    setState(!body.classList.contains('paradata-on'));
+  });
+
+  if (dismiss) {
+    dismiss.addEventListener('click', function() {
+      intro.classList.remove('is-visible');
+      setTimeout(() => { intro.hidden = true; }, 300);
+      try { localStorage.setItem(INTRO_SEEN_KEY, '1'); } catch (e) {}
+    });
+  }
+
+  // Keyboard: P toggles paradata mode
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'p' && !e.ctrlKey && !e.metaKey && !e.altKey &&
+        document.activeElement.tagName !== 'INPUT' &&
+        document.activeElement.tagName !== 'TEXTAREA') {
+      setState(!body.classList.contains('paradata-on'));
+    }
+  });
+
+  console.log('paradata toggle: ready');
+});
+</script>
+
+</body>
+</html>
